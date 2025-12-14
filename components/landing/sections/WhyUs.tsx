@@ -14,8 +14,8 @@ export const WhyUs = () => {
     ];
 
   return (
-    <section id="why-us" className="container mx-auto px-6 max-w-7xl mb-32 relative z-10">
-      <div className="bg-white/[0.02] border border-white/5 rounded-[3rem] p-10 md:p-16 backdrop-blur-sm overflow-hidden relative">
+    <section id="why-us" className="container mx-auto px-6 max-w-7xl mb-24 md:mb-32 relative z-10">
+      <div className="bg-white/[0.02] border border-white/5 rounded-[2rem] md:rounded-[3rem] p-6 md:p-16 backdrop-blur-sm overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-cyan-500/5" />
         
         <Reveal width="100%">

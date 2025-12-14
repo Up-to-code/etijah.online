@@ -9,7 +9,7 @@ export const VisionValues = () => {
     <section className="container mx-auto px-6 max-w-7xl mb-32 space-y-32">
         {/* Vision Section */}
         <Reveal width="100%">
-            <div className="relative rounded-[3rem] p-10 md:p-16 overflow-hidden border border-white/10 bg-gradient-to-br from-emerald-900/20 to-black backdrop-blur-md">
+            <div className="relative rounded-[2rem] md:rounded-[3rem] p-6 md:p-16 overflow-hidden border border-white/10 bg-gradient-to-br from-emerald-900/20 to-black backdrop-blur-md">
                 {/* Decoration */}
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
                 

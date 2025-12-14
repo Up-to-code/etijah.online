@@ -6,7 +6,7 @@ import { GlassCard } from '@/components/landing/GlassCard';
 
 export const Services = () => {
   return (
-    <section id="services" className="container mx-auto px-6 max-w-7xl mb-32 relative z-10">
+    <section id="services" className="container mx-auto px-6 max-w-7xl mb-24 md:mb-32 relative z-10">
       <div className="text-right mb-16">
         <Reveal>
           <div className="inline-block mb-4">

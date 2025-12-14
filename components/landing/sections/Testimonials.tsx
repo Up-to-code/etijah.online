@@ -7,7 +7,7 @@ import { SpotlightCard } from '@/components/landing/SpotlightCard';
 
 export const Testimonials = () => {
   return (
-    <section id="testimonials" className="relative py-32 bg-black overflow-hidden">
+    <section id="testimonials" className="relative py-20 md:py-32 bg-black overflow-hidden">
       {/* Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[100px] -translate-y-1/2" />
