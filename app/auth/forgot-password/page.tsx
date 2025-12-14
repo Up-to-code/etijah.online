@@ -51,7 +51,7 @@ export default function ForgotPasswordPage() {
           {success ? (
             <div className="space-y-4">
               <div className="rounded-xl bg-green-500/10 border border-green-500/20 p-4 text-sm text-green-500 font-mono">
-                > RECOVERY_LINK_SENT <br/>
+                &gt; RECOVERY_LINK_SENT <br/>
                 Please check your inbox.
               </div>
               <Link
@@ -106,4 +106,6 @@ export default function ForgotPasswordPage() {
     </div>
   )
 }
+
+
 
