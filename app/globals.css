@@ -36,8 +36,18 @@
 html[lang="ar"] body {
   line-height: 1.8;
   /* Arabic needs more breathing room vertically */
-  letter-spacing: normal;
+  letter-spacing: 0em !important;
   /* Arabic words connect, so excessive tracking breaks it */
+  word-spacing: 0.05em;
+  /* Slight word spacing for better legibility in Arabic */
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4 {
+  line-height: 1.4 !important;
+  /* Headings need slightly more space than default in Arabic */
 }
 
 /* High Fidelity Utilities */
@@ -114,6 +124,40 @@ html[lang="ar"] body {
   to {
     transform: translateY(calc(-100% - var(--gap)));
   }
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bounce-slow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
 }
 
 .animate-marquee {
