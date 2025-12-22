@@ -24,7 +24,7 @@ export const Team = () => {
           <TeamCard
             name="أحمد"
             role="الشريك المؤسس & CTO"
-            image="https://lxlnvkv63w.ufs.sh/f/mB2esVAwkuPDJojhtaltbn4X3B0T7va2ZgQMFq8rKPj6AC9N"
+            image="https://lxlnvkv63w.ufs.sh/f/mB2esVAwkuPD0bWXvWPmr7qen1Cs3u8xDVvH5Ij9QEXKYfac"
             description="مسؤول عن الرؤية التقنية، بناء الأنظمة، وهندسة المنتجات الذكية. يركّز على تحويل الأفكار التقنية إلى أدوات عملية تخدم النمو الحقيقي للأعمال."
           />
         </Reveal>
