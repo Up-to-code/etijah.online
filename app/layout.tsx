@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import "./globals.css";
-
+import { Analytics } from '@vercel/analytics/next';
 const cairo = Cairo({
    subsets: ["arabic"],
    weight: ["200", "300", "400", "500", "700", "800", "900"],
@@ -23,6 +23,7 @@ export default function RootLayout({
         className={`${cairo.className} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
