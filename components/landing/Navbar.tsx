@@ -61,9 +61,9 @@ export const Navbar = ({ user, signOutAction }: NavbarProps) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-20 left-6 right-6 md:hidden"
+            className="absolute top-20 left-4 right-4 md:hidden"
           >
-            <div className="bg-zinc-900/98 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col gap-2 text-center">
+            <div className="bg-zinc-900/90 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col gap-1 text-center">
               <Link href="#about" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-200 hover:text-white py-3 border-b border-white/5 transition-colors">عن الشركة</Link>
               <Link href="#services" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-200 hover:text-white py-3 border-b border-white/5 transition-colors">خدماتنا</Link>
               <Link href="#team" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-200 hover:text-white py-3 border-b border-white/5 transition-colors">فريق العمل</Link>

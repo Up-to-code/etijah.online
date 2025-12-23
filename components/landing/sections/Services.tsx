@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Reveal } from '@/components/landing/Reveal';
 import { GlassCard } from '@/components/landing/GlassCard';

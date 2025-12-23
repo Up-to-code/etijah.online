@@ -29,30 +29,30 @@ export const Hero = () => {
         <Reveal width="100%">
 
           {/* Animated Badge */}
-          <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-[0_0_30px_-5px_rgba(16,185,129,0.3)] hover:border-emerald-500/50 hover:bg-white/[0.06] transition-all duration-500 cursor-default mb-16 group overflow-hidden relative">
+          <div className="inline-flex items-center gap-3 px-4 py-2 md:px-6 md:py-2.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-[0_0_30px_-5px_rgba(16,185,129,0.3)] hover:border-emerald-500/50 hover:bg-white/[0.06] transition-all duration-500 cursor-default mb-10 md:mb-16 group overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,1)]"></span>
             </span>
-            <span className="text-sm font-semibold text-emerald-100 tracking-wide brightness-110">
+            <span className="text-xs md:text-sm font-semibold text-emerald-100 tracking-wide brightness-110">
               رؤيتنا المستدامة نحو التحول الرقمي
             </span>
           </div>
 
-          <h1 className="flex flex-col items-center justify-center gap-6 md:gap-8 mb-12 relative z-10">
-            <span className="text-4xl px-10 sm:text-6xl md:text-8xl lg:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-gray-400 drop-shadow-2xl leading-[1]">
+          <h1 className="flex flex-col items-center justify-center gap-6 md:gap-8 mb-10 md:mb-12 relative z-10">
+            <span className="text-4xl px-4 sm:text-6xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-gray-400 drop-shadow-2xl leading-tight md:leading-[1.1]">
               نموك، يبدأ بـ
             </span>
 
-            <div className="relative mt-2">
+            <div className="relative mt-2 w-full max-w-[90vw]">
               <div className="absolute inset-0 bg-emerald-500/20 blur-[80px] rounded-full animate-pulse-slow mix-blend-screen" />
-              <CardFlipWords words={words} className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl" />
+              <CardFlipWords words={words} className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl" />
             </div>
           </h1>
 
-          <div className="max-w-3xl mx-auto space-y-6 mb-16">
-            <p className="text-lg md:text-2xl text-gray-200 leading-relaxed font-medium">
+          <div className="max-w-3xl mx-auto space-y-6 mb-12 md:mb-16">
+            <p className="text-base md:text-2xl text-gray-200 leading-relaxed font-medium px-4">
               برمجيات ذكية، صُممت لتنمو معك بلا تعقيد. نبتكر التقنية التي تخدمك، <span className="text-emerald-400 font-bold">لا ترهقك.</span>
             </p>
           </div>

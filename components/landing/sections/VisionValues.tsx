@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Reveal } from '@/components/landing/Reveal';
 import { Check, Lightbulb, Users, BarChart3, TrendingUp, Zap } from 'lucide-react';

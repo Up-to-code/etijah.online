@@ -64,7 +64,7 @@ export const TeamCard = ({ name, role, image, description, className }: TeamCard
         <p className="text-emerald-400 text-xs md:text-sm font-medium tracking-wider uppercase mb-4">{role}</p>
 
         {description && (
-          <p className="text-gray-200 text-sm leading-relaxed font-normal md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:absolute md:inset-x-6 md:top-full md:bg-black/95 md:p-4 md:rounded-b-2xl md:border md:border-white/10 md:-mt-2 md:pointer-events-none md:group-hover:pointer-events-auto md:shadow-2xl md:z-20">
+          <p className="text-gray-200 text-sm leading-relaxed font-normal md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 md:absolute md:inset-x-6 md:top-full md:bg-black/95 md:p-4 md:rounded-b-2xl md:border md:border-white/10 md:-mt-2 md:pointer-events-none md:group-hover:pointer-events-auto md:shadow-2xl md:z-20">
             {description}
           </p>
         )}

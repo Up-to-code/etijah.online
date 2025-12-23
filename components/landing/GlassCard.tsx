@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { ArrowLeft } from 'lucide-react';
@@ -34,30 +32,30 @@ export const GlassCard = ({ title, description, image, category, href, className
         </div>
 
         {/* Circular Image Container */}
-        <div className="mt-auto relative self-center w-full aspect-square max-w-[280px] my-4">
-             {/* Glowing backing for image */}
-             <div className="absolute inset-0 bg-emerald-500/20 blur-[60px] rounded-full scale-90 group-hover:scale-110 transition-transform duration-700" />
-             
-             {/* The Image Itself */}
-             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/5 group-hover:border-emerald-500/20 transition-colors shadow-2xl">
-                <img 
-                    src={image} 
-                    alt={title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-3"
-                />
-                
-                {/* Overlay inside image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-             </div>
+        <div className="mt-auto relative self-center w-full aspect-square max-w-[200px] md:max-w-[280px] my-4">
+          {/* Glowing backing for image */}
+          <div className="absolute inset-0 bg-emerald-500/20 blur-[60px] rounded-full scale-90 group-hover:scale-110 transition-transform duration-700" />
+
+          {/* The Image Itself */}
+          <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/5 group-hover:border-emerald-500/20 transition-colors shadow-2xl">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-3"
+            />
+
+            {/* Overlay inside image */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          </div>
         </div>
 
         {/* Action Button (if href exists) */}
         {href && (
-            <div className="absolute bottom-8 left-8 z-20">
-                <Link href={href} className="flex items-center gap-2 text-white font-bold bg-white/5 hover:bg-emerald-500/20 px-6 py-3 rounded-full backdrop-blur-md border border-white/10 hover:border-emerald-500/30 transition-all group-hover:translate-x-1">
-                    المزيد <ArrowLeft className="h-4 w-4" />
-                </Link>
-            </div>
+          <div className="absolute bottom-8 left-8 z-20">
+            <Link href={href} className="flex items-center gap-2 text-white font-bold bg-white/5 hover:bg-emerald-500/20 px-6 py-3 rounded-full backdrop-blur-md border border-white/10 hover:border-emerald-500/30 transition-all group-hover:translate-x-1">
+              المزيد <ArrowLeft className="h-4 w-4" />
+            </Link>
+          </div>
         )}
       </div>
 
