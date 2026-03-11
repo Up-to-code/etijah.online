@@ -12,10 +12,10 @@ export default function ProjectsPage() {
            <div className="container mx-auto px-6 max-w-6xl">
               <Reveal>
                 <div className="text-right">
-                   <h1 className="text-8xl md:text-[12rem] font-black text-slate-900 tracking-tighter leading-none mb-12">
+                   <h1 className="text-[3.5rem] sm:text-7xl md:text-[12rem] font-black text-slate-900 tracking-tighter leading-none mb-8 md:mb-12">
                      مشاريعنا
                    </h1>
-                   <p className="text-2xl md:text-4xl text-slate-500 font-bold leading-tight tracking-tight max-w-3xl ml-auto mr-0">
+                   <p className="text-lg sm:text-xl md:text-4xl text-slate-500 font-bold leading-tight tracking-tight max-w-3xl ml-auto mr-0">
                      استعراض لبروتوكولات النمو التي قمنا بهندستها لتحويل الرؤى إلى واقع رقمي متين.
                    </p>
                 </div>

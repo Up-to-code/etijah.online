@@ -13,10 +13,10 @@ export default function VisionPage() {
            <div className="container mx-auto px-6 max-w-6xl">
               <Reveal>
                 <div className="text-right">
-                   <h1 className="text-8xl md:text-[14rem] font-black text-slate-900 tracking-tighter leading-none mb-12">
+                   <h1 className="text-[3.5rem] sm:text-7xl md:text-[14rem] font-black text-slate-900 tracking-tighter leading-none mb-8 md:mb-12">
                      الرؤية
                    </h1>
-                   <p className="text-3xl md:text-5xl text-blue-600 font-black leading-tight tracking-tight uppercase max-w-4xl ml-auto mr-0">
+                   <p className="text-lg sm:text-2xl md:text-5xl text-blue-600 font-black leading-tight tracking-tight uppercase max-w-4xl ml-auto mr-0">
                       نحن نوائم كل كود برمجي مع طموحات رؤية المملكة العربية السعودية ۲۰۳۰.
                    </p>
                 </div>

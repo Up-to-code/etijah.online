@@ -19,16 +19,16 @@ export const MinimalHero = () => {
       <div className="container mx-auto px-6 relative z-10 text-center">
         <Reveal width="100%">
           <div className="flex flex-col items-center">
-            <h1 className="flex flex-col gap-2 mb-12">
-              <span className="text-8xl md:text-[14rem] font-black text-slate-900 leading-none tracking-tighter">
+            <h1 className="flex flex-col gap-2 mb-8 md:mb-12">
+              <span className="text-[3.5rem] sm:text-7xl md:text-[14rem] font-black text-slate-900 leading-none tracking-tighter">
                 نهندس
               </span>
-              <span className="text-8xl md:text-[14rem] font-black text-blue-600 leading-none tracking-tighter -mt-4">
+              <span className="text-[3.5rem] sm:text-7xl md:text-[14rem] font-black text-blue-600 leading-none tracking-tighter -mt-2 md:-mt-4">
                 المستقبل
               </span>
             </h1>
 
-            <p className="max-w-3xl text-2xl md:text-4xl text-slate-900 font-bold leading-tight mb-16 tracking-tight">
+            <p className="max-w-3xl text-lg sm:text-xl md:text-4xl text-slate-900 font-bold leading-tight mb-12 md:mb-16 tracking-tight px-2">
               أنظمة نمو تقنية مبنية ببروتوكولات هندسية صارمة لمستقبل الأعمال الرقمي في المملكة.
             </p>
 
