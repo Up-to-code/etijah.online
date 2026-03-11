@@ -5,50 +5,37 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 
-interface NavbarProps {
-  user: any;
-  signOutAction: () => Promise<void>;
-}
-
-export const Navbar = ({ user, signOutAction }: NavbarProps) => {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 px-6 py-4">
-      <div className="max-w-7xl mx-auto glass rounded-2xl px-6 py-4 flex items-center justify-between border-b border-white/5 relative bg-black/50 backdrop-blur-xl">
-        <div className="flex items-center gap-2">
-          <span className="text-xl font-bold text-white glow-text">اتجاه التقنية</span>
+    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md h-24 flex items-center transition-all duration-500">
+      <div className="container mx-auto px-6 max-w-6xl w-full flex items-center justify-between">
+        <div className="flex items-center">
+          <Link href="/" className="text-2xl font-black text-slate-900 tracking-tighter">
+            اتجاه
+          </Link>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
-          <Link href="#about" className="hover:text-white hover:scale-105 transition-all">عن الشركة</Link>
-          <Link href="#services" className="hover:text-white hover:scale-105 transition-all">خدماتنا</Link>
-          <Link href="#team" className="hover:text-white hover:scale-105 transition-all">فريق العمل</Link>
-          <Link href="#vision" className="hover:text-white hover:scale-105 transition-all">الرؤية</Link>
+        <div className="hidden md:flex items-center gap-12 text-[11px] font-black text-slate-400 uppercase tracking-widest">
+          <Link href="/about" className="hover:text-blue-600 transition-colors">عن الشركة</Link>
+          <Link href="/projects" className="hover:text-blue-600 transition-colors">المشاريع</Link>
+          <Link href="/vision" className="hover:text-blue-600 transition-colors">الرؤية</Link>
         </div>
 
         <div className="flex items-center gap-4">
-          {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
+            className="md:hidden p-2 text-slate-900"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
           <div className="hidden md:block">
-            {user ? (
-              <form action={signOutAction}>
-                <button type="submit" className="text-sm font-medium hover:text-white text-gray-400 transition-colors">
-                  تسجيل الخروج
-                </button>
-              </form>
-            ) : (
-              <Link href="/auth/signup" className="text-sm font-medium bg-white text-black px-4 py-2 rounded-lg hover:bg-emerald-50 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all">
-                ابدأ رحلتك
-              </Link>
-            )}
+            <Link href="https://wa.me/message/YOUR_WHATSAPP_LINK" className="text-sm font-black text-blue-600 hover:text-slate-900 transition-colors uppercase tracking-widest px-6 py-3 border-2 border-blue-600 hover:border-slate-900">
+              ابدأ الآن
+            </Link>
           </div>
         </div>
       </div>
@@ -57,30 +44,19 @@ export const Navbar = ({ user, signOutAction }: NavbarProps) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -20, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-20 left-4 right-4 md:hidden"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-24 left-0 right-0 bg-white border-b-2 border-slate-50 md:hidden z-40"
           >
-            <div className="bg-zinc-900/90 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col gap-1 text-center">
-              <Link href="#about" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-200 hover:text-white py-3 border-b border-white/5 transition-colors">عن الشركة</Link>
-              <Link href="#services" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-200 hover:text-white py-3 border-b border-white/5 transition-colors">خدماتنا</Link>
-              <Link href="#team" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-200 hover:text-white py-3 border-b border-white/5 transition-colors">فريق العمل</Link>
-              <Link href="#vision" onClick={() => setIsOpen(false)} className="text-lg font-medium text-gray-200 hover:text-white py-3 border-b border-white/5 transition-colors">الرؤية</Link>
-
-              <div className="pt-4">
-                {user ? (
-                  <form action={signOutAction}>
-                    <button type="submit" className="w-full text-lg font-medium text-red-400 hover:text-red-300 transition-colors py-3">
-                      تسجيل الخروج
-                    </button>
-                  </form>
-                ) : (
-                  <Link href="/auth/signup" onClick={() => setIsOpen(false)} className="block w-full text-center text-lg font-bold bg-white text-black px-4 py-4 rounded-xl hover:bg-emerald-50 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                    ابدأ رحلتك
-                  </Link>
-                )}
+            <div className="flex flex-col p-10 gap-6 text-right">
+              <Link href="/about" onClick={() => setIsOpen(false)} className="text-4xl font-black text-slate-900">عن الشركة</Link>
+              <Link href="/projects" onClick={() => setIsOpen(false)} className="text-4xl font-black text-slate-900">المشاريع</Link>
+              <Link href="/vision" onClick={() => setIsOpen(false)} className="text-4xl font-black text-slate-900">الرؤية</Link>
+              <div className="pt-8">
+                <Link href="https://wa.me/message/YOUR_WHATSAPP_LINK" onClick={() => setIsOpen(false)} className="text-xl font-black text-blue-600">
+                  ابدأ الآن
+                </Link>
               </div>
             </div>
           </motion.div>

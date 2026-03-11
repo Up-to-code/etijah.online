@@ -30,13 +30,13 @@ export const SpotlightCard = ({ children, className = "" }: { children: React.Re
       onMouseMove={handleMouseMove}
       onMouseEnter={handleFocus}
       onMouseLeave={handleBlur}
-      className={`relative overflow-hidden ${className} glass transition-all duration-300`}
+      className={`relative overflow-hidden bg-white border-2 border-slate-100 p-8 ${className}`}
     >
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(16, 185, 129, 0.15), transparent 40%)`,
+          background: `radial-gradient(400px circle at ${position.x}px ${position.y}px, rgba(37, 99, 235, 0.05), transparent 70%)`,
         }}
       />
       <div className="relative z-10">{children}</div>

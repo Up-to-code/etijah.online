@@ -32,174 +32,48 @@
   --font-mono: var(--font-cairo);
 }
 
-/* Arabic Typography Optimizations */
-html[lang="ar"] body {
-  line-height: 1.8;
-  /* Arabic needs more breathing room vertically */
-  letter-spacing: 0em !important;
-  /* Arabic words connect, so excessive tracking breaks it */
-  word-spacing: 0.05em;
-  /* Slight word spacing for better legibility in Arabic */
-}
-
-html[lang="ar"] h1,
-html[lang="ar"] h2,
-html[lang="ar"] h3,
-html[lang="ar"] h4 {
-  line-height: 1.4 !important;
-  /* Headings need slightly more space than default in Arabic */
-}
-
-/* High Fidelity Utilities */
-.glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.glass:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.1);
-}
-
-.glass-blue {
-  background: rgba(15, 23, 42, 0.6);
-  /* Darker blue tint */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(59, 130, 246, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
-
-.glass-blue:hover {
-  background: rgba(15, 23, 42, 0.7);
-  border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
-}
-
-/* Performance & Speed Optimizations */
-.fast-transition {
-  transition-duration: 200ms !important;
-}
-
-.will-change-transform {
-  will-change: transform;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  /* Hardware acceleration */
-}
-
-.text-glow {
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
-
-.ambient-glow {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
-  filter: blur(60px);
-  pointer-events: none;
-  z-index: 0;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
-}
-
-@keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
-  }
-}
-
-@keyframes pulse-slow {
-
-  0%,
-  100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.5;
-    transform: scale(1.05);
-  }
-}
-
-@keyframes bounce-slow {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 8s ease-in-out infinite;
-}
-
-.animate-bounce-slow {
-  animation: bounce-slow 3s ease-in-out infinite;
-}
-
-.animate-marquee {
-  animation: marquee var(--duration) linear infinite;
-}
-
-.animate-marquee-vertical {
-  animation: marquee-vertical var(--duration) linear infinite;
-}
-
 @layer base {
   :root {
-    --background: #000000;
-    --foreground: #ffffff;
+    --background: #FFFFFF;
+    --foreground: #0F172A;
 
-    --card: #0a0a0a;
-    --card-foreground: #ffffff;
+    --card: #FFFFFF;
+    --card-foreground: #0F172A;
 
-    --popover: #0a0a0a;
-    --popover-foreground: #ffffff;
+    --popover: #FFFFFF;
+    --popover-foreground: #0F172A;
 
-    --primary: #ffffff;
-    --primary-foreground: #000000;
+    --primary: #2563EB;
+    --primary-foreground: #FFFFFF;
 
-    --secondary: #171717;
-    --secondary-foreground: #ffffff;
+    --secondary: #F8FAFC;
+    --secondary-foreground: #0F172A;
 
-    --muted: #171717;
-    --muted-foreground: #a3a3a3;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
 
-    --accent: #171717;
-    --accent-foreground: #ffffff;
+    --accent: #F1F5F9;
+    --accent-foreground: #0F172A;
 
-    --destructive: #7f1d1d;
-    --destructive-foreground: #ffffff;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
 
-    --border: #1f1f1f;
-    --input: #1f1f1f;
-    --ring: #ffffff;
+    --border: #F1F5F9;
+    --input: #F1F5F9;
+    --ring: #2563EB;
 
-    --radius: 0.75rem;
+    --radius: 0px;
   }
+}
+
+/* Institutional Protocol Styles */
+.tracking-institutional {
+  letter-spacing: 0.4em;
+}
+
+.border-institutional {
+  border-width: 2px;
+  border-style: solid;
 }
 
 @layer base {
@@ -211,14 +85,19 @@ html[lang="ar"] h4 {
     @apply bg-background text-foreground;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   }
-}
 
-@layer utilities {
-  .glass {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  /* Arabic Typography Optimizations */
+  html[lang="ar"] body {
+    line-height: 1.8;
+    letter-spacing: 0em !important;
+    word-spacing: 0.05em;
   }
 
-  .glass-hover {
-    @apply hover:bg-white/10 transition-colors duration-300;
+  html[lang="ar"] h1,
+  html[lang="ar"] h2,
+  html[lang="ar"] h3,
+  html[lang="ar"] h4 {
+    @apply uppercase;
+    line-height: 1.4 !important;
   }
 }

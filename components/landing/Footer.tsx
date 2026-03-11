@@ -5,37 +5,39 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-white/5 py-12 bg-black relative z-10">
-      <div className="container mx-auto px-6 mb-12 text-right">
-         <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">نحن لا نبني برمجيات فقط،</h2>
-         <p className="text-xl text-emerald-400">نحن نبني أدوات تساعد الأعمال على النمو</p>
-      </div>
-      <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/5 pt-8">
-         <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-            <div className="text-sm text-gray-500 font-medium">
-              © 2024 اتجاه التقنية. جميع الحقوق محفوظة.
-            </div>
-         </div>
-         
-         <div className="flex gap-8 text-sm text-gray-400">
-           <Link href="#" className="hover:text-emerald-400 transition-colors relative group">
-             سياسة الخصوصية
-             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all group-hover:w-full"></span>
-           </Link>
-           <Link href="#" className="hover:text-emerald-400 transition-colors relative group">
-             الشروط والأحكام
-             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all group-hover:w-full"></span>
-           </Link>
-           <Link href="#" className="hover:text-emerald-400 transition-colors relative group">
-             تويتر
-             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all group-hover:w-full"></span>
-           </Link>
-           <Link href="#" className="hover:text-emerald-400 transition-colors relative group">
-             لينكد إن
-             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all group-hover:w-full"></span>
-           </Link>
-         </div>
+    <footer className="bg-white py-32 border-t-2 border-slate-50">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-16 mb-32">
+          
+          <div className="text-right">
+            <h2 className="text-4xl font-black text-slate-900 tracking-tighter mb-4">اتجاه</h2>
+            <p className="text-slate-400 text-lg font-bold">هندسة المستقبل الرقمي للمملكة.</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-16 text-right">
+             <div className="flex flex-col gap-4">
+                <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2">الروابط</span>
+                <Link href="#solutions" className="text-sm font-bold text-slate-900">الحلول</Link>
+                <Link href="#vision" className="text-sm font-bold text-slate-900">الرؤية</Link>
+                <Link href="#team" className="text-sm font-bold text-slate-900">الفريق</Link>
+             </div>
+             <div className="flex flex-col gap-4">
+                <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2">تواصل</span>
+                <span className="text-sm font-bold text-slate-900">INFO@ETIJAH.ONLINE</span>
+                <span className="text-sm font-bold text-slate-900">الرياض، المملكة</span>
+             </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-slate-50">
+           <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">
+             جميع الحقوق محفوظة © ٢٠٢٤ اتجاه
+           </span>
+           <div className="flex gap-8">
+             <Link href="#" className="text-[10px] font-black text-slate-300 hover:text-blue-600 transition-colors uppercase tracking-widest">LINNKEDIN</Link>
+             <Link href="#" className="text-[10px] font-black text-slate-300 hover:text-blue-600 transition-colors uppercase tracking-widest">TWITTER_X</Link>
+           </div>
+        </div>
       </div>
     </footer>
   );

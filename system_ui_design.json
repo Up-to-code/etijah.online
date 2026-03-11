@@ -1,0 +1,46 @@
+{
+  "system_name": "Etijah Ultra-Minimalism v2.0",
+  "version": "2.0.0",
+  "core_values": [
+    "Ultra-Clean Aesthetics",
+    "SVG-Driven Visuals",
+    "Absolute Clarity",
+    "Saudi Institutional Growth"
+  ],
+  "design_tokens": {
+    "colors": {
+      "primary": "#2563eb",
+      "background": "#ffffff",
+      "text_main": "#0f172a",
+      "text_muted": "#64748b",
+      "accent": "#f1f5f9"
+    },
+    "typography": {
+      "font_family": "Cairo, sans-serif",
+      "scales": {
+        "hero_title": "text-8xl md:text-[14rem]",
+        "section_title": "text-4xl md:text-7xl",
+        "body": "text-lg md:text-2xl"
+      },
+      "tracking": "tracking-tighter"
+    },
+    "layout": {
+      "max_width": "max-w-6xl",
+      "spacing": {
+        "section_py": "py-32 md:py-64",
+        "item_gap": "gap-24"
+      }
+    },
+    "elements": {
+      "borders": "border-none",
+      "shadows": "shadow-none",
+      "rounding": "rounded-none",
+      "svg_stroke": "1.5px"
+    }
+  },
+  "rules": {
+    "white_space": "Mandatory 60%+ visual breathing room",
+    "animations": "Subtle translate-y reveals only",
+    "svg_usage": "SVG focal point per section"
+  }
+}
